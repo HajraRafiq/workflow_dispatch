@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.ref == 'refs/heads/main' && 'main' || 'test_workflow_dispatch' }}
+          ref: ${{ github.ref == 'refs/heads/main' && 'main' || 'test_workflow_dispatch' || 'branch_2' || 'branch_3 '}}
 
       - name: Run a script
-        run: echo "This is a manually triggered workflow on the 'main' branch!"
+        run: echo "This is a manually triggered workflow on the 'diferent' branch!"
