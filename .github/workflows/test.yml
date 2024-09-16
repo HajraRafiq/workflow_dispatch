@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: test_workflow_dispatch  # Specify the branch here
+          ref: main  # Specify the branch here
 
       - name: Run a script
         run: echo "This is a manually triggered workflow on the 'main' branch!"
