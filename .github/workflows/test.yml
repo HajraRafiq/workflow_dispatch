@@ -1,0 +1,17 @@
+name: Simple Workflow Dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: test_workflow_dispatch  # Specify the branch here
+
+      - name: Run a script
+        run: echo "This is a manually triggered workflow on the 'main' branch!"
